@@ -17,6 +17,10 @@ gem 'rake'
 
 gem 'shotgun'
 
+# Use Twitter gem
+
+gem 'twitter'
+
 group :test do
   gem 'faker'
   gem 'rspec'

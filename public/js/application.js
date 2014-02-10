@@ -1,7 +1,13 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  var name = $(location).attr('href').replace('http://localhost:9393/', '');
+  $.ajax({
+    url: "refresh_cache",
+    type: "POST",
+    data: {username: name},
+    dataType: "html",
+    success: function(result){
+      $("#loading").hide();
+      $("#recent").append(result);
+    }
+  });
 });
