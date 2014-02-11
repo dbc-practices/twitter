@@ -1,4 +1,4 @@
-Create *.YMAL in /config:
+Create "twitter.yaml" in /config:
 
 ```ymal
 ---
